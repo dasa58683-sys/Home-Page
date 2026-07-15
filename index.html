@@ -15,46 +15,144 @@
 
     <div class="top-bar">
       <i class="fa-solid fa-truck"></i>
-      <p class="shipping-text"><span class="red">Free Shipping</span> on Orders Above ₹999</p>
+      <p class="shipping-text"><span class="red">Free Shipping</span> on all orders</p>
     </div>
 
     <!-- navbar -->
 
     <nav class="navbar">
-      <div class="hamburger">
+        <div class="nav-links">
+      <!-- <div class="hamburger">
         <button class="menu-btn">
             <i class="fa-solid fa-bars"></i>
         </button>
-      </div>
+      </div> -->
+
+      <!-- Hamburger -->
+<div class="hamburger">
+    <button class="menu-btn" id="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+</div>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay"></div>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+
+    <div class="sidebar-header">
+        <div class="sidebar-header-top">
+        <button class="close-btn" id="closeBtn">✕</button>
+        <h2>Saree Sanskriti</h2>
+        <!-- <p>Sanskriti</p> -->
+        </div>
+        <div class="user-box">
+            <div class="user-icon">
+                <i class="fa-regular fa-user"></i>
+            </div>
+
+            <div>
+                <h3>Hello</h3>
+                <p>Sign in / Register</p>
+            </div>
+        </div>
+    </div>
+
+    <ul class="menu-list">
+
+    <li>
+        <i class="fa-solid fa-house menu-icon"></i> Home</li>
+
+<li><i class="fa-solid fa-bag-shopping menu-icon"></i> Shop All Sarees</li>
+
+<!-- <li class="category-title">
+    <i class="fa-solid fa-border-all menu-icon"></i> Categories
+</li>
+
+<ul class="sub-menu">
+    <li>Silk Sarees</li>
+    <li>Cotton Sarees</li>
+    <li>Banarasi Sarees</li>
+    <li>Georgette Sarees</li>
+    <li>Chiffon Sarees</li>
+</ul> -->
+
+<li><i class="fa-solid fa-star menu-icon"></i> New Arrivals</li>
+
+<li><i class="fa-solid fa-fire menu-icon"></i> Best Sellers</li>
+
+<li><i class="fa-solid fa-tag menu-icon"></i> Sale / Offers</li>
+
+<li><a href="https://dasa58683-sys.github.io/wishlist/"><i class="fa-regular fa-heart menu-icon"></i> Wishlist</a></li>
+
+<li><a href="https://dasa58683-sys.github.io/cart/"><i class="fa-solid fa-cart-shopping menu-icon"></i> My Cart</a></li>
+
+<li><i class="fa-solid fa-box menu-icon"></i> My Orders</li>
+
+<li><i class="fa-solid fa-location-dot menu-icon"></i> Track Order</li>
+
+<li><a href="http://127.0.0.1:5500/my%20account/index.html#"><i class="fa-regular fa-user menu-icon"></i> My Account</a></li>
+
+<li><i class="fa-solid fa-headset menu-icon"></i> Customer Support</li>
+
+<li><i class="fa-solid fa-circle-info menu-icon"></i> About Us</li>
+
+<li><i class="fa-solid fa-phone menu-icon"></i> Contact Us</li>
+
+    </ul>
+
+<div class="social-section">
+    <h4>Follow Us</h4>
+
+    <div class="social-icons">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-pinterest-p"></i>
+        <i class="fa-brands fa-youtube"></i>
+    </div>
+    <div class="secure-payment">
+    <i class="fa-solid fa-shield-halved"></i>
+    <span>100% Secure Payment</span>
+</div>
+</div>
+
+</div>
+
+
+
 
         <!-- logo -->
 
          <div class="logo">
         <h1>Saree</h1>
         <p>Sanskriti</p>
-        <!-- <img src="/photos/logo new.jpeg" class="logo-img"> -->
          </div>
 
         <div class="nav-actions">
             <button class="wishlist-btn">
-                <i class="fa-regular fa-heart"></i>
+                <a href="https://dasa58683-sys.github.io/wishlist/"><i class="fa-regular fa-heart"></i></a>
+                <span class="count-badge" id="wishlist-count">0</span>
             </button>
 
             <button class="cart-btn">
-               <i class="fa-solid fa-bag-shopping"></i>
-                <!-- <span class="cart-count">2</span> -->
+               <a href="https://dasa58683-sys.github.io/cart/"><i class="fa-solid fa-bag-shopping"></i></a>
+                <span class="count-badge1" id="cart-count">0</span>
             </button>
+        </div>
         </div>
     </nav>
 
 </header>
 
+<!-- search bar -->
+
 <section class="search-section">
     <div class="search-box">
         <span class="search"><i class="fa-solid fa-magnifying-glass"></i></span>
-        <input class="search-input" type="text" placeholder="Search for sarees, styles, colors...">
+        <input class="search-input" type="text" placeholder="Search for sarees, styles, colors..." id="searchInput" onclick="goToSearch()" readonly>
        
-        <span class="remove"><i class="fa-solid fa-xmark"></i></span>
+        <span class="remove"><i class="fa-solid fa-xmark" id="clearBtn"></i></span>
        
     </div>
 </section>
@@ -62,35 +160,20 @@
 <section class="hero-section">
     <div class="hero-slider">
         <div class="hero-slide">
-            <div class="hero-content">
-                <span class="hero-subtitle">
-                    Timeless Elegance
-                </span>
-                <h1 class="hero-title">
-                    Sarees that
-                    <br>
-                    Celebrate you
-                </h1>
-
-                <p class="hero-description">
-                    Hand picked sarees for every occassion. 
-                    Grace. Tradition. You.
-                </p>
-                <button class="hero-btn">
-                    Shop Now
-                </button>
-            </div>
 
             <div class="hero-image-wrapper">
-                <img class="hero-image" id="heroImage" src="/photos/hero.jpeg" alt="Saree Model" >
+                <img class="hero-image" id="heroImage" src="offer.jpeg" alt="Saree Model" >
             </div>
-        </div>
-
-        <div class="slider-dots">
-            <span class="dot active"></span>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
         </div>
     </div>
 </section>
+
+<!-- feature section -->
 
 <section class="features-section">
     <div class="feature-track">
@@ -193,51 +276,63 @@
     </div>
 </section>
 
+<!-- category section -->
+
 <section class="category-section">
 
-    <div class="section-header">
-        <h2 class="section-title">Shop by Category</h2>
-    </div>
+    <!-- <div class="section-header">
+        <h2 class="section-title">Top Categories</h2>
+    </div> -->
 
     <div class="category-slider">
 
         <div class="category-card">
-            <img class="category-image" src="/photos/wedding.jpeg">
+            <img class="category-image" src="wedding.jpeg">
             <h3 class="category-name">Wedding</h3>
         </div>
 
         <div class="category-card">
-            <img class="category-image" src="/photos/pink kanjivaram main.jpeg">
-            <h3 class="category-name">Silk Saree</h3>
+            <img class="category-image" src="bed2.jpeg">
+            <h3 class="category-name">Bedsheet</h3>
         </div>
 
         <div class="category-card">
-            <img class="category-image" src="/photos/pink kanjivaram 5.jpeg">
+            <img class="category-image" src="pink kanjivaram main.jpeg">
+            <h3 class="category-name">Silk Saree</h3>
+        </div>
+
+         <div class="category-card">
+            <img class="category-image" src="curtain5.jpeg">
+            <h3 class="category-name">Curtains</h3>
+        </div>
+
+        <div class="category-card">
+            <img class="category-image" src="pink kanjivaram 5.jpeg">
             <h3 class="category-name">Kanjivaram</h3>
         </div>
 
         <div class="category-card">
-            <img class="category-image" src="/photos/benarasi.jpeg">
+            <img class="category-image" src="benarasi.jpeg">
             <h3 class="category-name">Benarasi</h3>
         </div>
 
         <div class="category-card">
-            <img class="category-image" src="/photos/party wear.jpeg">
+            <img class="category-image" src="party wear.jpeg">
             <h3 class="category-name">Party wear</h3>
         </div>
 
         <div class="category-card">
-            <img class="category-image" src="/photos/daily wear .jpeg">
-            <h3 class="category-name">Daily Wear</h3>
+            <img class="category-image" src="women night wear.jpeg">
+            <h3 class="category-name">Night Wear</h3>
         </div>
 
         <div class="category-card">
-            <img class="category-image" src="/photos/kids wear.jpeg">
+            <img class="category-image" src="kids wear.jpeg">
             <h3 class="category-name">Kids Wear</h3>
         </div>
 
         <div class="category-card">
-            <img class="category-image" src="/photos/salwar.jpeg">
+            <img class="category-image" src="salwar.jpeg">
             <h3 class="category-name">Kurta</h3>
         </div>
 
@@ -245,10 +340,41 @@
 
 </section>
 
+<!-- recently viewed items -->
+
+<section class="recently-viewed">
+    <h3>Anish, still looking for these?</h3>
+
+    <div class="recent-slider">
+        <div class="recent-card">
+            <img src="pink kanjivaram 2.jpeg">
+            <p>Benarasi Saree</p>
+        </div>
+
+        <div class="recent-card">
+            <img src="salwar1.jpeg">
+            <p>Party Wear</p>
+        </div>
+
+        <div class="recent-card">
+            <img src="kids wear.jpeg">
+            <p>Daily Wear</p>
+        </div>
+
+         <div class="recent-card">
+            <img src="salwar.jpeg">
+            <p>Salwar</p>
+        </div>
+    </div>
+</section>
+
+<!-- product section -->
+
 <section class="product-section">
 
     <div class="section-header">
         <h2 class="section-title">Bestsellers</h2>
+        <a href="#" class="view-all">View All</a>
     </div>
 
     <div class="product-grid">
@@ -258,7 +384,7 @@
                 <i class="fa-regular fa-heart"></i>
             </button>
 
-            <img class="product-image" src="/photos/salwar.jpeg">
+            <img class="product-image" src="salwar.jpeg">
 
             <div class="product-content">
                 <h3 class="product-title">Blue salwar</h3>
@@ -285,7 +411,7 @@
                 <i class="fa-regular fa-heart"></i>
             </button>
 
-            <img class="product-image" src="/photos/kudta1.jpeg">
+            <img class="product-image" src="pink kanjivaram main.jpeg">
 
             <div class="product-content">
                 <h3 class="product-title">Blue zari work salwar</h3>
@@ -312,7 +438,7 @@
                 <i class="fa-regular fa-heart"></i>
             </button>
 
-            <img class="product-image" src="/photos/salwar1.jpeg">
+            <img class="product-image" src="salwar1.jpeg">
 
             <div class="product-content">
                 <h3 class="product-title">Pink Kurti</h3>
@@ -339,7 +465,7 @@
                 <i class="fa-regular fa-heart"></i>
             </button>
 
-            <img class="product-image" src="/photos/kanjivaram new.jpeg">
+            <img class="product-image" src="kanjivaram new.jpeg">
 
             <div class="product-content">
                 <h3 class="product-title">Pink Kanjivaram Saree</h3>
@@ -360,9 +486,9 @@
 
         </div>
 
-    </div>
-
 </section>
+
+<!-- discount banner -->
 
 <section class="banner-section">
 
@@ -372,18 +498,434 @@
             <button class="banner-btn"></button>
         </div>
         <div class="discount-img">
-        <img class="banner-image" id="bannerImage" src="/photos/idependence.jpeg">
+        <img class="banner-image" id="bannerImage" src="idependence.jpeg">
         </div>
     </div>
 
 </section>
 
+<!-- home and decor -->
+
+<section class="occasion-section">
+    <div class="occasion-main">
+    <div class="section-header1">
+        <h2 class="section-title1">Home Decoration</h2>
+    </div>
+
+    <div class="occasion-grid">
+
+        <div class="occasion-card">
+            <img src="bed1.jpeg" alt="">
+            <div class="occasion-info">
+                <h3>King size bed Sheets</h3>
+                <p>40 Items</p>
+            </div>
+        </div>
+
+        <div class="occasion-card">
+            <img src="bed2.jpeg" alt="">
+            <div class="occasion-info">
+                <h3>Queen size bed sheets</h3>
+                <p>30 Items</p>
+            </div>
+        </div>
+
+        <div class="occasion-card">
+            <img src="curtain1.jpeg" alt="">
+            <div class="occasion-info">
+                <h3>Window Curtain Cotton</h3>
+                <p>46 Items</p>
+            </div>
+        </div>
+
+        <div class="occasion-card">
+            <img src="curtain3.jpeg" alt="">
+            <div class="occasion-info">
+                <h3>Window Curtain Silk</h3>
+                <p>32 Items</p>
+            </div>
+        </div>
+    </div>
+   </div>
+</section>
+
+<!-- new arrivals -->
+
+<section class="new-arrivals-section">
+
+    <div class="section-header">
+        <h2 class="section-title">New Arrivals</h2>
+        <a href="#" class="view-all">View All</a>
+    </div>
+
+    <div class="new-arrivals-slider">
+
+       <!-- product 1 -->
+
+        <div class="arrival-card">
+           <button class="wishlist-toggle">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <img class="product-image" src="new1.jpeg">
+
+            <div class="product-content">
+                <h3 class="product-title">Blue salwar</h3>
+
+                <div class="product-price-row">
+                    <span class="product-price">₹2,499</span>
+                    <span class="product-old-price">₹3,000</span>
+                </div>
+
+                <div class="product-rating">
+
+                <i class="fa-solid fa-star star-icon"></i>
+
+                    <span class="rating-value">4.8(120)</span>
+                </div>
+        </div>
+        </div>
+
+        <!-- product 2 -->
+
+              <div class="arrival-card">
+           <button class="wishlist-toggle">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <img class="product-image" src="new2.jpeg">
+
+            <div class="product-content">
+                <h3 class="product-title">Blue salwar</h3>
+
+                <div class="product-price-row">
+                    <span class="product-price">₹2,499</span>
+                    <span class="product-old-price">₹3,000</span>
+                </div>
+
+                <div class="product-rating">
+
+                <i class="fa-solid fa-star star-icon"></i>
+
+                    <span class="rating-value">4.8(120)</span>
+                </div>
+        </div>
+        </div>
+
+        <!-- product 3 -->
+
+              <div class="arrival-card">
+           <button class="wishlist-toggle">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <img class="product-image" src="new3.jpeg">
+
+            <div class="product-content">
+                <h3 class="product-title">Blue salwar</h3>
+
+                <div class="product-price-row">
+                    <span class="product-price">₹2,499</span>
+                    <span class="product-old-price">₹3,000</span>
+                </div>
+
+                <div class="product-rating">
+
+                <i class="fa-solid fa-star star-icon"></i>
+
+                    <span class="rating-value">4.8(120)</span>
+                </div>
+        </div>
+        </div>
+
+        <!-- product 4 -->
+
+              <div class="arrival-card">
+           <button class="wishlist-toggle">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <img class="product-image" src="new4.jpeg">
+
+            <div class="product-content">
+                <h3 class="product-title">Blue salwar</h3>
+
+                <div class="product-price-row">
+                    <span class="product-price">₹2,499</span>
+                    <span class="product-old-price">₹3,000</span>
+                </div>
+
+                <div class="product-rating">
+
+                <i class="fa-solid fa-star star-icon"></i>
+
+                    <span class="rating-value">4.8(120)</span>
+                </div>
+        </div>
+        </div>
+
+        <!-- product 5 -->
+
+              <div class="arrival-card">
+           <button class="wishlist-toggle">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <img class="product-image" src="salwar.jpeg">
+
+            <div class="product-content">
+                <h3 class="product-title">Blue salwar</h3>
+
+                <div class="product-price-row">
+                    <span class="product-price">₹2,499</span>
+                    <span class="product-old-price">₹3,000</span>
+                </div>
+
+                <div class="product-rating">
+
+                <i class="fa-solid fa-star star-icon"></i>
+
+                    <span class="rating-value">4.8(120)</span>
+                </div>
+        </div>
+        </div>
+       
+        </div>
+
+    </div>
+
+</section>
+
+<!-- trending collection -->
+
+<section class="trending-section">
+
+    <div class="trending-main">
+    <div class="section-header1">
+        <h2 class="section-title1">Trending Collection</h2>
+    </div>
+
+    <div class="trending-grid">
+
+        <div class="trending-card">
+            <img src="wedding.jpeg" alt="">
+            <div class="trending-overlay">
+                <h3>Wedding Collection</h3>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <img src="kanjivaram new.jpeg" alt="">
+            <div class="trending-overlay">
+                <h3>Silk Collection</h3>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <img src="party wear.jpeg" alt="">
+            <div class="trending-overlay">
+                <h3>Party Wear</h3>
+            </div>
+        </div>
+
+        <div class="trending-card">
+            <img src="kids wear.jpeg" alt="">
+            <div class="trending-overlay">
+                <h3>Kids Fashion</h3>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+</section>
+
+<!-- deal of the day -->
+
+<section class="deal-section">
+
+    <div class="section-header">
+        <h2 class="section-title">Deals of the Day</h2>
+    </div>
+
+    <div class="deal-card">
+
+        <div class="deal-image">
+            <img src="pink kanjivaram main.jpeg" alt="Deal Product">
+        </div>
+
+        <div class="deal-content">
+
+            <span class="deal-badge">Limited time Offer</span>
+
+            <h3 class="deal-product-title">
+                Pink Kanjivaram Saree
+            </h3>
+
+            <div class="deal-price-row">
+                <span class="deal-price">₹1,499</span>
+                <span class="deal-old-price">₹3,999</span>
+                <span class="deal-discount">62% OFF</span>
+            </div>
+
+            <div class="countdown">
+
+                <div class="time-box">
+                    <span id="hours">02</span>
+                    <small>Hours</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="minutes">15</span>
+                    <small>Min</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="seconds">30</span>
+                    <small>Sec</small>
+                </div>
+
+            </div>
+
+            <button class="deal-btn">
+                Shop Now
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- shop by occassion  -->
+
+<section class="occasion-section">
+    <div class="occasion-main">
+    <div class="section-header1">
+        <h2 class="section-title1">Shop By Occasion</h2>
+    </div>
+
+<!-- <div class="product-card1">
+
+    <button class="wishlist-toggle">
+        <i class="fa-regular fa-heart"></i>
+    </button>
+
+    <img src="salwar.jpeg" alt="Product">
+
+    <div class="rating-badge1">
+        <span class="rating">4.8 <i class="fa-solid fa-star"></i></span>
+        <span class="review-no">| 120</span>
+    </div>
+
+    <div class="product-details1">
+
+        <p class="brand-name1">Saree Sanskriti</p>
+
+        <h3 class="product-name1">
+            Women Cotton Embroi...
+        </h3>
+
+        <div class="price-section1">
+            <span class="discount1"><i class="fa-solid fa-arrow-down"></i>58%</span>
+
+            <span class="old-price1">₹999</span>
+
+            <span class="new-price1">₹414</span>
+        </div>
+
+        <p class="offer1">
+            ₹364 with Bank Offer
+        </p>
+
+        <p class="delivery">
+            Free Delivery
+        </p>
+
+    </div>
+
+</div> -->
+
+    <div class="occasion-grid">
+
+        <div class="occasion-card">
+            <img src="pink kanjivaram main.jpeg" alt="">
+            <div class="occasion-info">
+                <h3>Festive</h3>
+                <p>128 Items</p>
+            </div>
+        </div>
+
+        <div class="occasion-card">
+            <img src="wedding.jpeg" alt="">
+            <div class="occasion-info">
+                <h3>Wedding</h3>
+                <p>189 Items</p>
+            </div>
+        </div>
+
+        <div class="occasion-card">
+            <img src="party wear.jpeg" alt="">
+            <div class="occasion-info">
+                <h3>Party Wear</h3>
+                <p>97 Items</p>
+            </div>
+        </div>
+
+        <div class="occasion-card">
+            <img src="kurta.jpeg" alt="">
+            <div class="occasion-info">
+                <h3>Office</h3>
+                <p>64 Items</p>
+            </div>
+        </div>
+    </div>
+   </div>
+</section>
+
 <footer class="footer">
 
-    <div class="footer-links"></div>
+    <div class="footer-logo">
+        <h2>Saree Sanskriti</h2>
+        <p>Tradition in Every Drape</p>
+    </div>
 
-    <div class="social-icons">
-        <a class="social-link"></a>
+    <div class="footer-links">
+
+        <div class="footer-column">
+            <h3>Shop</h3>
+            <a href="#">Sarees</a>
+            <a href="#">New Arrivals</a>
+            <a href="#">Best Sellers</a>
+            <a href="#">Collections</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Help & Support</h3>
+            <a href="#">Contact Us</a>
+            <a href="#">Shipping</a>
+            <a href="#">Returns</a>
+            <a href="#">FAQ</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>About Us</h3>
+            <a href="#">About Saree Sanskriti</a>
+            <a href="#">Our Story</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+
+    </div>
+
+    <div class="footer-social">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Saree Sanskriti. All Rights Reserved.
     </div>
 
 </footer>
@@ -398,11 +940,11 @@
     </a>
 
     <a href="#" class="nav-item">
-       <i class="fa-solid fa-border-all nav-icon"></i>
+       <i class="fa-solid fa-border-all nav-icon" id="categoryBtn"></i>
         <span>Categories</span>
     </a>
 
-    <a href="#" class="nav-item">
+    <a href="https://dasa58683-sys.github.io/wishlist/" class="nav-item">
         <i class="fa-regular fa-heart nav-icon"></i>
         <span>Wishlist</span>
     </a>
@@ -413,6 +955,143 @@
     </a>
 
 </nav>
+
+<!-- Category Overlay -->
+<div class="category-overlay" id="categoryOverlay"></div>
+
+<!-- Category Panel -->
+
+<div class="category-panel" id="categoryPanel">
+
+    <!-- Handle -->
+
+    <div class="category-handle" id="categoryHandle"></div>
+
+    <!-- Header -->
+
+    <div class="category-header">
+
+        <h2>Shop Categories</h2>
+
+        <button id="closeCategory">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+    <!-- Body -->
+
+    <div class="category-body">
+
+        <!-- Left Menu -->
+
+        <div class="category-left">
+
+            <button class="left-item active" data-category="sarees">
+
+                <img src="pink kanjivaram main.jpeg">
+
+                <span>Sarees</span>
+
+            </button>
+
+            <button class="left-item" data-category="kurtas">
+
+                <img src="salwar.jpeg">
+
+                <span>Kurtas</span>
+
+            </button>
+
+            <button class="left-item" data-category="bedsheets">
+
+                <img src="kudta1.jpeg">
+
+                <span>Bed Sheets</span>
+
+            </button>
+
+        </div>
+
+        <!-- Right -->
+
+        <div class="category-right">
+
+            <!-- Sarees -->
+
+            <div class="category-content active" id="sareees">
+
+                <div class="sub-category">
+
+                    <img src="pink kanjivaram 5.jpeg">
+
+                    <p>Silk Sarees</p>
+
+                </div>
+
+                <div class="sub-category">
+
+                    <img src="kanjivaram new.jpeg">
+
+                    <p>Cotton Sarees</p>
+
+                </div>
+
+                <div class="sub-category">
+
+                    <img src="pink kanjivaram 4.jpeg">
+
+                    <p>Banarasi</p>
+
+                </div>
+
+                <div class="sub-category">
+
+                    <img src="pink kanjivaram 3.jpeg">
+
+                    <p>Organza</p>
+
+                </div>
+
+                <div class="sub-category">
+
+                    <img src="pink kanjivaram 2.jpeg">
+
+                    <p>Chiffon</p>
+
+                </div>
+
+                <div class="sub-category">
+
+                    <img src="kids wear.jpeg">
+
+                    <p>Linen</p>
+
+                </div>
+
+            </div>
+
+            <!-- Kurtas -->
+
+            <div class="category-content" id="kurtas">
+
+                <!-- পরে দেব -->
+
+            </div>
+
+            <!-- BedSheets -->
+
+            <div class="category-content" id="bedsheets">
+
+                <!-- পরে দেব -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
 <script>
         const track = document.querySelector(".feature-track");
